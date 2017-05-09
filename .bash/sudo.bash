@@ -43,6 +43,8 @@ if $HAS_TERMINAL && ! $WINDOWS; then
     alias groupmod='sudo groupmod'
     alias php5dismod='sudo php5dismod'
     alias php5enmod='sudo php5enmod'
+    alias phpdismod='sudo phpdismod'
+    alias phpenmod='sudo phpenmod'
     alias pow='sudo poweroff'
     alias poweroff='sudo poweroff'
     alias reboot='sudo reboot'
@@ -52,6 +54,15 @@ if $HAS_TERMINAL && ! $WINDOWS; then
     alias userdel='sudo userdel'
     alias usermod='sudo usermod'
     alias yum='sudo yum'
+
+    systemctl() {
+        if [ "$1" = "list-units" ]; then
+            # The 'list-units' subcommand is used by tab completion
+            command systemctl "$@"
+        else
+            command sudo systemctl "$@"
+        fi
+    }
 
     # Add sbin folder to my path so they can be auto-completed
     PATH="$PATH:/usr/local/sbin:/usr/sbin:/sbin"

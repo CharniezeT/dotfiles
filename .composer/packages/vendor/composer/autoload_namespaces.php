@@ -11,10 +11,10 @@ return array(
     'WP_CLI' => array($vendorDir . '/wp-cli/wp-cli/php'),
     'SensioLabs\\Security' => array($vendorDir . '/sensiolabs/security-checker'),
     'Requests' => array($vendorDir . '/rmccue/requests/library'),
-    'Prophecy\\' => array($vendorDir . '/phpspec/prophecy/src'),
     'Oxymel' => array($vendorDir . '/nb/oxymel'),
     'Mustache' => array($vendorDir . '/mustache/mustache/src'),
     'JakubOnderka\\PhpConsoleHighlighter' => array($vendorDir . '/jakub-onderka/php-console-highlighter/src'),
     'JakubOnderka\\PhpConsoleColor' => array($vendorDir . '/jakub-onderka/php-console-color/src'),
     'Drush' => array($vendorDir . '/drush/drush/lib'),
+    'Consolidation' => array($vendorDir . '/drush/drush/lib'),
 );
